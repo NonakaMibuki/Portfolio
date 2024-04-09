@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://unpkg.com/modern-css-reset/dist/reset.min.css" />
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100..900&family=Roboto&display=swap"
+        rel="stylesheet">
+    <title>Portfolio | Mibuki Nonaka</title>
+</head>
+
+<body>
+    <div class="wrapper">
+        <header>
+            <h1><a href="#">ようこそ
+                    <br>
+                    <span class="pc_only">Mibuki's Portfolioへ</span>
+                    <span class="sp_only">My portfolioへ</span>
+                </a>
+            </h1>
+            <div class="mv">
+                <img src="img/top.slider(1).jpg" alt="海を眺めているトップ画像">
+            </div>
+            <nav id="global__nav">
+                <ul>
+                    <li><a href="#">Top</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#works">Works</a></li>
+                    <li><a href="pieces.html">30</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </header>
+        <main>
+            <section class="about" id="about">
+                <div class="about-inner" >
+                    <div class="title">
+                        <h2>About</h2>
+                        <p>私について</p>
+                    </div>
+                    <div class="about-item">
+                        <div class="about-subtitle fadeIn sp_only">
+                            <p>クライアントファーストと
+                                <br>
+                                ユーザーファーストが
+                                <br>
+                                叶うデザインを。
+                            </p>
+                        </div>
+                        <div class="about-text">
+                            <p>お客様の要望・抱えている問題をお聞きし、
+                                <br>
+                                <span class="marker">「何を伝えたいのか」</span>を正確に形にするのはもちろん
+                                <br>
+                                その先のエンドユーザーが<span class="marker">「何を求めているのか」</span>まで考え、
+                                <br>
+                                両者のバランスが取れたサイトを作りたいと考えております。
+                            </p>
+                            <a href="about.html" class="about-morebtn">More</a>
+                        </div>
+                        <div class="about-subtitle fadeIn pc_only">
+                            <p>クライアントファーストと
+                                <br>
+                                ユーザーファーストが
+                                <br>
+                                叶うデザインを。
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="works" id="works">
+                <div class="title">
+                    <h2>Works</h2>
+                    <p>これまでの制作実績</p>
+                </div>
+                <div class="works-list">
+                    <ul>
+                        <li>
+                            <a href=""><img src="img/your_coding_top.png" alt="your_coding制作実績1"></a>
+                            <p class="works__list--title">Your Coding　模写</p>
+                            <p class="works__list--text">HTML , CSS (Sass) , JavaScript (jQuery)</p>
+                        </li>
+                        <li>
+                            <a href=""><img src="img/creasta_design_top.png" alt="creata_design制作実績2"></a>
+                            <p class="works__list--title">Creata Design　模写</p>
+                            <p class="works__list--text">HTML , CSS , JavaScript (jQuery)</p>
+                        </li>
+                        <li>
+                            <a href=""><img src="img/flower_top.png" alt="flower制作実績3"></a>
+                            <p class="works__list--title">Flower　模写</p>
+                            <p class="works__list--text">HTML , CSS , JavaScript (jQuery)</p>
+                        </li>
+                    </ul>
+                </div>
+            </section>
+            <section class="pieces" id="pieces">
+                <div class="title">
+                    <h2>30</h2>
+                    <p>私を作っている30個の要素</p>
+                </div>
+                <div class="pieces__inner">
+                    <div class="pieces__box">
+                        <p class="pieces__box--title">30</p>
+                        <p class="pieces__box--text">pieces of me</p>
+                        <a href="pieces.html" class="pieces__box--more">MORE</a>
+                    </div>
+                </div>
+            </section>
+    </div>
+    <section class="contact">
+        <div class="contact-inner">
+            <div class="contact-box">
+                <p>Mibuki's Portfolioをみていただき
+                    <br>
+                    ありがとうございました！
+                </p>
+            </div>
+            <div class="contact-box2"></div>
+            <div class="contact-box3">
+                <a href="" class="contact-btn">お問い合わせ</a>
+            </div>
+        </div>
+    </section>
+    <footer>
+        <small>©️ mibuki nonaka. All Rights Reserved. </small>
+    </footer>
+    </main>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="main.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/modern-css-reset/dist/reset.min.css"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100..900&family=Roboto&display=swap"
+      rel="stylesheet"
+    />
+    <title>Contact | Mibuki Nonaka</title>
+  </head>
+  <body>
+    <header>
+      <div class="sub__header">
+        <nav>
+          <ul>
+            <li><a href="index.html">Top</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="index.html#works">Works</a></li>
+            <li><a href="#">30</a></li>
+            <li><a href="">Contact</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+    <main>
+      <section class="contact__box">
+        <div class="contact__box--inner">
+          <div class="contact__box--title">
+            <h2>Contact</h2>
+            <p>お問い合わせ</p>
+          </div>
+          <div class="contact__box--text">
+            <p>ポートフォリオをご覧いただき、ありがとうございます。
+              <br>
+              お仕事のご依頼やご相談、その他お問い合わせがございましたらお気軽にご連絡くださいませ。
+            </p>
+          </div>
+          <form action="https://docs.google.com/forms/u/0/d/e/1FAIpQLSfFQZyXvsFtaAv0tLtm72BUxb0kPlzdD7yMwhnA95B1N9Kdzg/formResponse" class="contact__box--form" method="post" target="hidden_iframe" onsubmit="submitted=true;">
+            <div class="form-field col x-50">
+              <input
+                id="name"
+                class="input-text js-input"
+                type="text"
+                name="entry.1315278952"
+                required
+              />
+              <label class="label" for="name">お名前<span>必須</span></label>
+            </div>
+            <div class="form-field col x-50">
+              <input
+                id="email"
+                class="input-text js-input"
+                type="email"
+                name="entry.1075645337"
+                required
+              />
+              <label class="label" for="email">メールアドレス<span>必須</span></label>
+            </div>
+            <div class="form-field col x-50">
+              <input id="tel" class="input-text js-input" type="tel" name="entry.713136138"/>
+              <label class="label" for="email">電話番号</label>
+            </div>
+            <div class="form-field col x-100">
+              <input
+                id="message"
+                class="input-text js-input"
+                type="text"
+                name="entry.634471479"
+                required
+              />
+              <label class="label" for="message">お問い合わせ内容<span>必須</span></label>
+            </div>
+            <div class="form-field col x-100 align-center">
+                <input class="submit-btn" type="submit" value="送信">
+             </div>
+          </form>
+          <script type="text/javascript">var submitted = false;</script>
+          <iframe name="hidden_iframe" id="hidden_iframe" style="display:none;" onload="if(submitted){window.location='http://localhost:8888/Portfolio/thanks.html';}"></iframe>
+        </div>
+      </section>
+      <section class="contact">
+        <div class="contact-inner">
+            <div class="contact-box">
+                <p>Mibuki's Portfolioをみていただき
+                    <br>
+                    ありがとうございました！
+                </p>
+            </div>
+        </div>
+    </section>
+    <footer>
+      <small>©️ mibuki nonaka. All Rights Reserved. </small>
+    </footer>
+    </main>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="main.js"></script>
+  </body>
+</html>
