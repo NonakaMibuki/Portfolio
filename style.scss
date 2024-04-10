@@ -51,6 +51,7 @@ h2 {
 header {
   margin: 30px auto;
 
+
   h1 {
     font-family: "myfont", sans-serif;
     text-align: center;
@@ -72,6 +73,10 @@ header {
     }
   }
 
+  .openbtn {
+    display: none;
+  }
+
   .mv {
     animation: fadein 3s ease-out forwards;
 
@@ -84,16 +89,18 @@ header {
     }
   }
 
-  ul {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    box-sizing: border-box;
+  nav {
+    ul {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      box-sizing: border-box;
 
-    li {
-      list-style: none;
-      padding: 0 55px;
-      font-weight: 600;
+      li {
+        list-style: none;
+        padding: 0 55px;
+        font-weight: 600;
+      }
     }
   }
 }
@@ -132,6 +139,68 @@ header {
       }
     }
 
+    .header__top {
+      display: flex;
+      height: 60px;
+
+      .openbtn {
+        display: block;
+        position: relative;
+        cursor: pointer;
+        width: 50px;
+        height: 50px;
+        margin: 10px 10px 0;
+
+        span {
+          display: inline-block;
+          transition: all 0.4s; /*アニメーションの設定*/
+          position: absolute;
+        }
+
+        span:nth-of-type(1),
+        span:nth-of-type(3) {
+          height: 1px;
+          background: #333;
+          width: 65%;
+          left: 10px;
+        }
+
+        span:nth-of-type(1) {
+          top: 10px;
+        }
+
+        span:nth-of-type(2) {
+          top: 20px;
+          left: 13px;
+          font-size: 0.6rem;
+          text-transform: uppercase;
+          color: #333;
+        }
+
+        span:nth-of-type(3) {
+          top: 38px;
+        }
+      }
+
+      .openbtn.active span:nth-of-type(1) {
+        top: 18px;
+        left: 18px;
+        transform: translateY(6px) rotate(-45deg);
+        width: 50%;
+      }
+
+      .openbtn.active span:nth-of-type(2) {
+        opacity: 0;
+      }
+
+      .openbtn.active span:nth-of-type(3) {
+        top: 30px;
+        left: 18px;
+        transform: translateY(-6px) rotate(45deg);
+        width: 50%;
+      }
+    }
+
     .mv img {
       margin-top: 0;
       height: 250px;
@@ -142,7 +211,36 @@ header {
     }
 
     nav {
-      display: none;
+      position: fixed;
+      right: -120%;
+      top: 60px;
+      width: 100%;
+      height: calc(100% - 60px);
+      background-color: #fdedf5;
+      opacity: 0.97;
+      z-index: 999;
+      transition: right .5s;
+
+      ul {
+        display: block;
+        padding: 0;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+
+        li a {
+          display: block;
+          margin-bottom: 50px;
+          color: #888;
+          font-size: 1.2rem;
+          text-align: center;
+        }
+      }
+    }
+
+    .global__nav.active {
+      right: 0;
     }
   }
 }
@@ -312,7 +410,6 @@ About
     }
 
     &-subtitle {
-
       p {
         margin-top: -55px;
         line-height: 2;
@@ -1252,7 +1349,6 @@ Contactページ
     }
 
     &--title {
-
       h2 {
         font-size: 2.4rem;
         letter-spacing: -0.3em;

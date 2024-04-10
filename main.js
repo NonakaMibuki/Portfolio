@@ -3,6 +3,11 @@ $(function () {
     $(window).scroll(function () {
       const windowHeight = $(window).height();
       const scroll = $(window).scrollTop();
+
+      $(".openbtn").click(function () {
+        $(this).toggleClass('active');
+        $(".global__nav").toggleClass('active');
+    });
   
       $('.fadeIn').each(function () {
         const targetPosition = $(this).offset().top;
