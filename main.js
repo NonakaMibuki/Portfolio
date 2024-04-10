@@ -13,7 +13,6 @@ $(function () {
     });
 
     $(".hover-mask").on("click", function(){
-        $(this).toggleClass("is-hidden");
         $(this).next().slideToggle(500);
         $(".hover-mask").not($(this)).next().slideUp(700);
     });
