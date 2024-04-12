@@ -16,19 +16,27 @@
     <title>30pieces | Mibuki Nonaka</title>
 </head>
 
-<body>
+<body ontouchstart="">
     <header>
-        <div class="sub__header">
-            <nav>
-                <ul>
-                    <li><a href="index.html">Top</a></li>
-                    <li><a href="about.html">About</a></li>
-                    <li><a href="index.html#works">Works</a></li>
-                    <li><a href="#">30</a></li>
-                    <li><a href="contact.html">Contact</a></li>
-                </ul>
-            </nav>
-        </div>
+        <div class="header__top">
+            <h1>
+              <a href="#">
+                <span class="sp_only">ようこそ
+                    <br>
+                    My portfolioへ</span>
+              </a>
+            </h1>
+            <div class="openbtn"><span></span><span>Menu</span><span></span></div>
+          </div>
+          <nav class="global__nav sub__nav">
+            <ul>
+              <li><a href="index.html">Top</a></li>
+              <li><a href="about.html">About</a></li>
+              <li><a href="index.html#works">Works</a></li>
+              <li><a href="pieces.html">30</a></li>
+              <li><a href="contact.html">Contact</a></li>
+            </ul>
+          </nav>
     </header>
     <main>
         <section class="Piece">
@@ -48,7 +56,7 @@
                     </div>
                 </div>
             </div>
-            <div class="Piece__list">
+            <div class="Piece__list area2">
                 <div class="first-line">
                     <ul class="Piece__item">
                         <li>
@@ -412,11 +420,14 @@
         </section>
     </main>
     <footer>
+        <p class="js-pagetop scroll-top"><a href="#">Page Top</a></p>
+        
         <small>©️ mibuki nonaka. All Rights Reserved. </small>
     </footer>
     <script src="https://code.jquery.com/jquery-3.7.1.min.js"
         integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
     <script src="main.js"></script>
+    <script>document.addEventListener('touchstart',function(){});</script>
 </body>
 
 </html>

@@ -51,7 +51,6 @@ h2 {
 header {
   margin: 30px auto;
 
-
   h1 {
     font-family: "myfont", sans-serif;
     text-align: center;
@@ -98,7 +97,7 @@ header {
 
       li {
         list-style: none;
-        padding: 0 55px;
+        padding: 0 50px;
         font-weight: 600;
       }
     }
@@ -140,16 +139,25 @@ header {
     }
 
     .header__top {
+      position: fixed;
+      z-index: 999;
+      top: 0;
+      left: 0;
+      right: 0;
+      width: 100%;
       display: flex;
+      padding: 0;
+      margin: 0;
       height: 60px;
+      box-sizing: border-box;
 
       .openbtn {
         display: block;
         position: relative;
         cursor: pointer;
+        background-color: #fff;
         width: 50px;
-        height: 50px;
-        margin: 10px 10px 0;
+        height: 60px;
 
         span {
           display: inline-block;
@@ -162,31 +170,31 @@ header {
           height: 1px;
           background: #333;
           width: 65%;
-          left: 10px;
+          left: 5px;
         }
 
         span:nth-of-type(1) {
-          top: 10px;
+          top: 15px;
         }
 
         span:nth-of-type(2) {
-          top: 20px;
-          left: 13px;
+          top: 25px;
+          left: 10px;
           font-size: 0.6rem;
           text-transform: uppercase;
           color: #333;
         }
 
         span:nth-of-type(3) {
-          top: 38px;
+          top: 43px;
         }
       }
 
       .openbtn.active span:nth-of-type(1) {
-        top: 18px;
-        left: 18px;
-        transform: translateY(6px) rotate(-45deg);
-        width: 50%;
+        top: 19px;
+        left: 13px;
+        transform: translateY(8px) rotate(-45deg);
+        width: 60%;
       }
 
       .openbtn.active span:nth-of-type(2) {
@@ -194,15 +202,15 @@ header {
       }
 
       .openbtn.active span:nth-of-type(3) {
-        top: 30px;
-        left: 18px;
-        transform: translateY(-6px) rotate(45deg);
-        width: 50%;
+        top: 36px;
+        left: 13px;
+        transform: translateY(-8px) rotate(45deg);
+        width: 60%;
       }
     }
 
     .mv img {
-      margin-top: 0;
+      margin-top: 70px;
       height: 250px;
       padding: 10px 15px;
       object-fit: cover;
@@ -219,7 +227,7 @@ header {
       background-color: #fdedf5;
       opacity: 0.97;
       z-index: 999;
-      transition: right .5s;
+      transition: right 0.5s;
 
       ul {
         display: block;
@@ -402,6 +410,10 @@ About
 }
 
 @media (max-width: 768px) {
+  .header__top {
+    display: block;
+  }
+
   .about {
     margin: 80px 15px 0;
 
@@ -711,6 +723,100 @@ footer {
   height: 30px;
   text-align: center;
 
+  .scroll-top {
+    position: fixed;
+    right: 20px;
+    bottom: 10px;
+    z-index: 2;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.5s, visibility 0.5s; /*それぞれに0.5秒の変化のアニメーション*/
+    -webkit-writing-mode: vertical-rl;
+    -ms-writing-mode: tb-rl;
+    writing-mode: vertical-rl;
+    white-space: nowrap;
+    animation: arrowmove 1s ease-in-out infinite;
+  }
+
+  .scroll-top.scroll-view {
+    opacity: 1;
+    visibility: visible;
+  }
+
+  .scroll-top a {
+    text-decoration: none;
+    color: #666;
+    text-transform: uppercase;
+    font-size: 0.9rem;
+    display: block;
+  }
+
+  .js-scroll a::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 1px;
+    height: 50px;
+    background: #666;
+  }
+
+  .js-scroll a::before {
+    content: "";
+    position: absolute;
+    top: 30px;
+    right: -6px;
+    width: 1px;
+    height: 20px;
+    background: #666;
+    transform: skewX(-31deg);
+  }
+
+  /*Edge IE11 hack*/
+  _:-ms-lang(x),
+  .js-scroll a::before {
+    right: -11px;
+  }
+
+  @keyframes arrowmove {
+    0% {
+      bottom: 20px;
+    }
+    50% {
+      bottom: 25px;
+    }
+    100% {
+      bottom: 20px;
+    }
+  }
+
+  .js-pagetop a::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 1px;
+    height: 50px;
+    background: #666;
+  }
+
+  .js-pagetop a::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: -6px;
+    width: 1px;
+    height: 20px;
+    background: #666;
+    transform: skewX(31deg);
+  }
+
+  /*Edge IE11 hack*/
+  _:-ms-lang(x),
+  .js-pagetop a::before {
+    right: 0;
+  }
+
   small {
     font-size: 0.8rem;
     letter-spacing: 0.2em;
@@ -740,24 +846,27 @@ footer {
   }
 }
 
+footer {
+  .scroll-top {
+    display: none;
+  }
+}
+
 /*==================
 
 Aboutページ
 
 ==================*/
 
-.sub__header {
-  nav {
-    ul {
-      justify-content: end;
+.sub__nav {
+  ul {
+    justify-content: end;
 
-      li {
-        padding: 0 40px 0 0;
-        font-weight: normal;
+    li {
+      font-weight: normal;
 
-        a {
-          color: #777676;
-        }
+      a {
+        color: #777676;
       }
     }
   }
@@ -800,7 +909,7 @@ Aboutページ
     float: right;
     position: relative;
     background-color: #fff;
-    z-index: 999;
+    z-index: 998;
     margin-top: -180px;
     padding: 50px;
 
@@ -946,13 +1055,14 @@ Aboutページ
 }
 
 @media (max-width: 768px) {
-  .sub__header {
-    display: none;
+  .header__top {
+    display: block;
   }
 
   .profile {
     &__inner {
-      margin: 50px 15px 80px 15px;
+      margin: 30px 15px 80px 15px;
+      padding-top: 60px;
     }
 
     &__title {
@@ -1189,6 +1299,7 @@ Piecesページ
   .Piece {
     &__inner {
       margin: 50px 15px;
+      padding-top: 40px;
     }
 
     &__title {
@@ -1345,13 +1456,14 @@ Contactページ
 @media (max-width: 768px) {
   .contact__box {
     &--inner {
-      margin: 80px 15px;
+      margin: 50px 15px;
+      padding-top: 40px;
     }
 
     &--title {
       h2 {
         font-size: 2.4rem;
-        letter-spacing: -0.3em;
+        letter-spacing: -0.4em;
       }
 
       p {
