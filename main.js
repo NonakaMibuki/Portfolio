@@ -40,6 +40,7 @@ $(function () {
   });
 });
 
+
 //スクロールした際の動きを関数でまとめる
 function PageTopCheck(){
   var winScrollTop = $(this).scrollTop();
@@ -51,7 +52,6 @@ function PageTopCheck(){
   $('.js-scroll').addClass('scroll-view');
   $('.js-pagetop').removeClass('scroll-view');
 }
-
 }
 
 //クリックした際の動き

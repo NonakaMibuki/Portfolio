@@ -768,9 +768,8 @@ footer small {
   }
 }
 footer .scroll-top {
-  display: none;
+  opacity: 0;
 }
-
 /*==================
 
 Aboutページ
