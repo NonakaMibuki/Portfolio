@@ -1,9 +1,12 @@
 $(function () {
+
+  //ハンバーガーメニュー
   $(".openbtn").click(function () {
     $(this).toggleClass("active");
     $(".global__nav").toggleClass("active");
   });
 
+  //ハンバーガーメニュー　同ページのアンカーに飛んでも表示消す
   $(".global__nav ul li a").click(function () {
     $(".openbtn").removeClass("active");
     $(".global__nav").removeClass("active");
@@ -13,6 +16,7 @@ $(function () {
     const windowHeight = $(window).height();
     const scroll = $(window).scrollTop();
 
+    //Aboutサブタイトルフェードイン
     $(".fadeIn").each(function () {
       const targetPosition = $(this).offset().top;
       if (scroll > targetPosition - windowHeight + 100) {
@@ -26,6 +30,7 @@ $(function () {
     $(".hover-mask").not($(this)).next().slideUp(700);
   });
 
+  //お問い合わせフォーム内文字
   $(".js-input").keyup(function () {
     if ($(this).val()) {
       $(this).addClass("not-empty");
@@ -38,35 +43,35 @@ $(function () {
 //スクロールした際の動きを関数でまとめる
 function PageTopCheck(){
   var winScrollTop = $(this).scrollTop();
-  var secondTop =  $(".area2").offset().top - 150; //#area-2の上から150pxの位置まで来たら
+  var secondTop =  $(".area2").offset().top - 150; 
   if(winScrollTop >= secondTop){
-  $('.js-scroll').removeClass('scroll-view');//.js-scrollからscroll-viewというクラス名を除去
-  $('.js-pagetop').addClass('scroll-view');//.js-pagetopにscroll-viewというクラス名を付与
+  $('.js-scroll').removeClass('scroll-view');
+  $('.js-pagetop').addClass('scroll-view');
 } else {//元に戻ったら
-  $('.js-scroll').addClass('scroll-view');//.js-scrollからscroll-viewというクラス名を付与
-  $('.js-pagetop').removeClass('scroll-view');//.js-pagetopからscroll-viewというクラス名を除去
+  $('.js-scroll').addClass('scroll-view');
+  $('.js-pagetop').removeClass('scroll-view');
 }
 
 }
 
 //クリックした際の動き
 $('.scroll-top a').click(function () {
-var elmHash = $(this).attr('href'); //hrefの内容を取得
-if (elmHash == "#about") {//もし、リンク先のhref の後が#area-2の場合
+var elmHash = $(this).attr('href'); 
+if (elmHash == "#about") {
   var pos = $(elmHash).offset().top;
-  $('body,html').animate({scrollTop: pos}, pos); //#area-2にスクロール
+  $('body,html').animate({scrollTop: pos}, pos); 
 }else{
-  $('body,html').animate({scrollTop: 0}, 500); //それ以外はトップへスクロール。数字が大きくなるほどゆっくりスクロール
+  $('body,html').animate({scrollTop: 0}, 500); 
 }
-  return false;//リンク自体の無効化
+  return false;
 });
 
-// 画面をスクロールをしたら動かしたい場合の記述
 $(window).scroll(function () {
-PageTopCheck();/* スクロールした際の動きの関数を呼ぶ*/
+PageTopCheck();
 });
 
-// ページが読み込まれたらすぐに動かしたい場合の記述
 $(window).on('load', function () {
-PageTopCheck();/* スクロールした際の動きの関数を呼ぶ*/
+PageTopCheck();
 });
+
+
