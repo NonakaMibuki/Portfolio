@@ -424,6 +424,54 @@ About
   }
 }
 /*======================
+Skills
+=======================*/
+.skill_area {
+  padding: 15px 0 10px;
+}
+.skill_area .title {
+  border-left: 5px solid #f2d4e3;
+  border-radius: 5px;
+  padding-left: 15px;
+}
+.skill_area .skill__details ul {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: left;
+  align-items: center;
+  padding: 30px 0;
+}
+.skill_area .skill__details ul li {
+  padding: 30px 45px;
+  text-align: center;
+}
+.skill_area .skill__details ul li img {
+  width: 6rem;
+  height: auto;
+  -o-object-fit: cover;
+     object-fit: cover;
+  transition-duration: 0.5s;
+}
+.skill_area .skill__details ul li img:hover {
+  transform: scale(1.2, 1.2);
+  transition-duration: 0.5s;
+}
+.skill_area .skill__details ul li p {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #333;
+  margin-top: 10px;
+  margin-bottom: 6px;
+  border-bottom: 3.5px dotted #f2d4e3;
+  letter-spacing: 0.1em;
+}
+.skill_area .skill__details ul li span {
+  font-size: 0.75rem;
+  color: #a4a3a3;
+}
+
+/*======================
 Works
 =======================*/
 .works {
@@ -446,17 +494,27 @@ Works
 .works .title p {
   font-weight: 600;
 }
+.works .works-list p.works__subtitle {
+  display: inline-block;
+  font-size: 1.3rem;
+  letter-spacing: 0.1em;
+  font-weight: 600;
+  color: #777676;
+  border: 1px solid #777676;
+  padding: 10px 20px;
+  margin: 50px 20px 20px;
+}
 .works ul {
   display: flex;
   align-items: center;
-  justify-content: space-around;
+  justify-content: left;
   flex-wrap: wrap;
-  margin: 80px auto 0;
   padding: 0;
 }
 .works ul li {
   list-style: none;
-  margin-bottom: 30px;
+  padding: 0 25px 30px;
+  margin-bottom: 20px;
 }
 .works ul li img {
   width: 330px;
@@ -1090,36 +1148,20 @@ Piecesページ
   line-height: 2;
 }
 .Piece__list .first-line ul li .hover-mask {
-  align-items: center;
   background: rgba(0, 0, 0, 0.3);
   bottom: 0;
   color: #fff;
-  display: flex;
+  display: none;
   height: 200px;
-  justify-content: center;
+  text-align: center;
+  line-height: 200px;
   left: 0;
-  opacity: 0;
   position: absolute;
   right: 0;
   top: 0;
   font-size: 0.95rem;
   transition: opacity 0.6s ease;
   width: 100%;
-}
-.Piece__list .first-line ul li .hover-mask::before {
-  content: "+";
-  position: absolute;
-  bottom: 10px;
-  right: 10px;
-  color: #fff;
-  font-size: 1.4rem;
-  line-height: 1;
-  width: auto;
-  height: auto;
-}
-.Piece__list .first-line ul li .hover-mask:hover {
-  opacity: 1;
-  /* hoverしたら透過しない(表示させる) */
 }
 
 @media (max-width: 768px) {
@@ -1153,6 +1195,7 @@ Piecesページ
   }
   .Piece__list .first-line ul li .hover-mask {
     height: 100px;
+    line-height: 100px;
     font-size: 0.7rem;
   }
   .Piece__list .first-line ul li .hover-mask::before {

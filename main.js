@@ -1,5 +1,4 @@
 $(function () {
-
   //ハンバーガーメニュー
   $(".openbtn").click(function () {
     $(this).toggleClass("active");
@@ -25,10 +24,20 @@ $(function () {
     });
   });
 
-  $(".hover-mask").on("click", function () {
-    $(this).next().slideToggle(500);
-    $(".hover-mask").not($(this)).next().slideUp(700);
-  });
+
+  $(document).ready(function() {
+    $(".Piece__item li").on("click", function() {
+        // クリックしたアイテムのhover-maskとpをトグル
+        $(this).find(".hover-mask, p").slideToggle(500);
+
+        // クリックされたアイテム以外のhover-maskとpを隠す
+        $(".Piece__item li").not(this).find(".hover-mask, p").slideUp(500);
+    });
+});  
+
+  //   $(".Piece__item li div").show(500);
+  //   $(".Piece__item li div").next().slideToggle(700);
+  // });
 
   //お問い合わせフォーム内文字
   $(".js-input").keyup(function () {
@@ -40,38 +49,36 @@ $(function () {
   });
 });
 
-
 //スクロールした際の動きを関数でまとめる
-function PageTopCheck(){
+function PageTopCheck() {
   var winScrollTop = $(this).scrollTop();
-  var secondTop =  $(".area2").offset().top - 150; 
-  if(winScrollTop >= secondTop){
-  $('.js-scroll').removeClass('scroll-view');
-  $('.js-pagetop').addClass('scroll-view');
-} else {//元に戻ったら
-  $('.js-scroll').addClass('scroll-view');
-  $('.js-pagetop').removeClass('scroll-view');
-}
+  var secondTop = $(".area2").offset().top - 150;
+  if (winScrollTop >= secondTop) {
+    $(".js-scroll").removeClass("scroll-view");
+    $(".js-pagetop").addClass("scroll-view");
+  } else {
+    //元に戻ったら
+    $(".js-scroll").addClass("scroll-view");
+    $(".js-pagetop").removeClass("scroll-view");
+  }
 }
 
 //クリックした際の動き
-$('.scroll-top a').click(function () {
-var elmHash = $(this).attr('href'); 
-if (elmHash == "#about") {
-  var pos = $(elmHash).offset().top;
-  $('body,html').animate({scrollTop: pos}, pos); 
-}else{
-  $('body,html').animate({scrollTop: 0}, 500); 
-}
+$(".scroll-top a").click(function () {
+  var elmHash = $(this).attr("href");
+  if (elmHash == "#about") {
+    var pos = $(elmHash).offset().top;
+    $("body,html").animate({ scrollTop: pos }, pos);
+  } else {
+    $("body,html").animate({ scrollTop: 0 }, 500);
+  }
   return false;
 });
 
 $(window).scroll(function () {
-PageTopCheck();
+  PageTopCheck();
 });
 
-$(window).on('load', function () {
-PageTopCheck();
+$(window).on("load", function () {
+  PageTopCheck();
 });
-
-
