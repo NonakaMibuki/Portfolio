@@ -507,6 +507,26 @@ Skills
   }
 }
 
+@media (max-width: 768px) {
+  .skill_area {
+    margin: 0 15px;
+  }
+
+  .skill__details ul{
+    padding: 15px 0 !important;
+    justify-content: center !important;
+
+    li {
+      padding: 12px 20px !important;
+
+      img {
+        width: 5rem !important;
+        margin: 0 auto !important;
+      }
+    }
+  }
+}
+
 /*======================
 Works
 =======================*/
@@ -584,6 +604,14 @@ Works
   .works {
     .title {
       margin-left: 15px;
+    }
+
+    .works-list p.works__subtitle {
+      margin: 20px;
+    }
+
+    ul {
+      justify-content: center;
     }
 
     ul li img {

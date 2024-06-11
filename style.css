@@ -471,6 +471,22 @@ Skills
   color: #a4a3a3;
 }
 
+@media (max-width: 768px) {
+  .skill_area {
+    margin: 0 15px;
+  }
+  .skill__details ul {
+    padding: 15px 0 !important;
+    justify-content: center !important;
+  }
+  .skill__details ul li {
+    padding: 12px 20px !important;
+  }
+  .skill__details ul li img {
+    width: 5rem !important;
+    margin: 0 auto !important;
+  }
+}
 /*======================
 Works
 =======================*/
@@ -539,6 +555,12 @@ Works
 @media (max-width: 768px) {
   .works .title {
     margin-left: 15px;
+  }
+  .works .works-list p.works__subtitle {
+    margin: 20px;
+  }
+  .works ul {
+    justify-content: center;
   }
   .works ul li img {
     width: 280px;

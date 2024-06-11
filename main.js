@@ -27,17 +27,11 @@ $(function () {
 
   $(document).ready(function() {
     $(".Piece__item li").on("click", function() {
-        // クリックしたアイテムのhover-maskとpをトグル
         $(this).find(".hover-mask, p").slideToggle(500);
-
-        // クリックされたアイテム以外のhover-maskとpを隠す
         $(".Piece__item li").not(this).find(".hover-mask, p").slideUp(500);
     });
 });  
 
-  //   $(".Piece__item li div").show(500);
-  //   $(".Piece__item li div").next().slideToggle(700);
-  // });
 
   //お問い合わせフォーム内文字
   $(".js-input").keyup(function () {
