@@ -546,10 +546,13 @@ Works
 .works ul li p.works__list--title {
   margin-top: 10px;
 }
-.works ul li p.works__list--text {
+.works ul li p.works__list--text, .works ul li p.works__list--link a {
   font-size: 0.8rem;
   margin-top: 7px;
   color: #a4a3a3;
+}
+.works ul li p.works__list--link a {
+  text-decoration: underline;
 }
 
 @media (max-width: 768px) {

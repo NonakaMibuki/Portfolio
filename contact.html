@@ -4,19 +4,14 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link
-      rel="stylesheet"
-      href="https://unpkg.com/modern-css-reset/dist/reset.min.css"
-    />
+    <link rel="stylesheet" href="https://unpkg.com/modern-css-reset/dist/reset.min.css" />
     <link rel="stylesheet" href="style.css" />
+    <link rel="shortcut icon" href="img/icons8-ocean-50.png" type="image/x-icon">
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100..900&family=Roboto&display=swap"
-      rel="stylesheet"
-    />
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100..900&family=Roboto&display=swap" rel="stylesheet" />
     <title>Contact | Mibuki Nonaka</title>
   </head>
   <body>
@@ -24,9 +19,11 @@
       <div class="header__top">
         <h1>
           <a href="#">
-            <span class="sp_only">ようこそ
-                <br>
-                My portfolioへ</span>
+            <span class="sp_only"
+              >ようこそ
+              <br />
+              My portfolioへ</span
+            >
           </a>
         </h1>
         <div class="openbtn"><span></span><span>Menu</span><span></span></div>
@@ -55,55 +52,22 @@
               お仕事のご依頼やご相談、その他お問い合わせがございましたらお気軽にご連絡くださいませ。
             </p>
           </div>
-          <form
-            action="https://docs.google.com/forms/u/0/d/e/1FAIpQLSfFQZyXvsFtaAv0tLtm72BUxb0kPlzdD7yMwhnA95B1N9Kdzg/formResponse"
-            class="contact__box--form"
-            method="post"
-            target="hidden_iframe"
-            onsubmit="submitted=true;"
-          >
+          <form action="https://docs.google.com/forms/u/0/d/e/1FAIpQLSfFQZyXvsFtaAv0tLtm72BUxb0kPlzdD7yMwhnA95B1N9Kdzg/formResponse" class="contact__box--form" method="post" target="hidden_iframe" onsubmit="submitted=true;">
             <div class="form-field col x-50">
-              <input
-                id="name"
-                class="input-text js-input"
-                type="text"
-                name="entry.1315278952"
-                required
-              />
+              <input id="name" class="input-text js-input" type="text" name="entry.1315278952" required />
               <label class="label" for="name">お名前<span>必須</span></label>
             </div>
             <div class="form-field col x-50">
-              <input
-                id="email"
-                class="input-text js-input"
-                type="email"
-                name="entry.1075645337"
-                required
-              />
-              <label class="label" for="email"
-                >メールアドレス<span>必須</span></label
-              >
+              <input id="email" class="input-text js-input" type="email" name="entry.1075645337" required />
+              <label class="label" for="email">メールアドレス<span>必須</span></label>
             </div>
             <div class="form-field col x-50">
-              <input
-                id="tel"
-                class="input-text js-input"
-                type="tel"
-                name="entry.713136138"
-              />
+              <input id="tel" class="input-text js-input" type="tel" name="entry.713136138" />
               <label class="label" for="email">電話番号</label>
             </div>
             <div class="form-field col x-100">
-              <input
-                id="message"
-                class="input-text js-input"
-                type="text"
-                name="entry.634471479"
-                required
-              />
-              <label class="label" for="message"
-                >お問い合わせ内容<span>必須</span></label
-              >
+              <input id="message" class="input-text js-input" type="text" name="entry.634471479" required />
+              <label class="label" for="message">お問い合わせ内容<span>必須</span></label>
             </div>
             <div class="form-field col x-100 align-center">
               <input class="submit-btn" type="submit" value="送信" />
@@ -112,12 +76,7 @@
           <script type="text/javascript">
             var submitted = false;
           </script>
-          <iframe
-            name="hidden_iframe"
-            id="hidden_iframe"
-            style="display: none"
-            onload="if(submitted){window.location='http://localhost:8888/Portfolio/thanks.html';}"
-          ></iframe>
+          <iframe name="hidden_iframe" id="hidden_iframe" style="display: none" onload="if(submitted){window.location='http://localhost:8888/Portfolio/thanks.html';}"></iframe>
         </div>
       </section>
       <section class="contact">

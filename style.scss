@@ -591,10 +591,14 @@ Works
         margin-top: 10px;
       }
 
-      p.works__list--text {
+      p.works__list--text, p.works__list--link a {
         font-size: 0.8rem;
         margin-top: 7px;
         color: #a4a3a3;
+      }
+      
+      p.works__list--link a {
+        text-decoration: underline;
       }
     }
   }
